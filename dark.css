@@ -1,0 +1,22 @@
+/* Force a white background so the invert filter turns it strictly black */
+/* Ensure the page takes at least the full viewport height to prevent white gaps at the bottom */
+html.dark-mode-active {
+    filter: invert(1) hue-rotate(180deg) !important;
+    background-color: #ffffff !important;
+    min-height: 100vh !important;
+}
+
+html.dark-mode-active body {
+    background-color: #ffffff !important;
+    min-height: 100vh !important;
+}
+
+/* Reverse the inversion for media elements to maintain original colors */
+html.dark-mode-active img,
+html.dark-mode-active video,
+html.dark-mode-active iframe,
+html.dark-mode-active canvas,
+html.dark-mode-active svg,
+html.dark-mode-active picture {
+    filter: invert(1) hue-rotate(180deg) !important;
+}

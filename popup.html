@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <style>
+        /* Modern dark theme for the popup body */
+        body { 
+            width: 250px; 
+            padding: 15px; 
+            font-family: Arial, sans-serif; 
+            background-color: #202124;
+            color: #e8eaed;
+            margin: 0;
+        }
+        .container { display: flex; flex-direction: column; gap: 10px; }
+        .title { font-size: 15px; font-weight: bold; text-align: center; color: #ffffff; margin-bottom: 5px; }
+        .site-name { font-size: 13px; text-align: center; color: #9aa0a6; word-break: break-all; margin-bottom: 5px;}
+        
+        button { 
+            border: none;
+            padding: 12px; 
+            cursor: pointer; 
+            width: 100%; 
+            font-size: 14px;
+            font-weight: bold; 
+            border-radius: 6px;
+            transition: all 0.2s ease-in-out;
+        }
+        
+        /* Dark Mode Global Button Styles */
+        .global-on { 
+            background-color: #303134; 
+            color: #8ab4f8; 
+            border: 1px solid #8ab4f8;
+        }
+        .global-on:hover { background-color: #3c4043; }
+        
+        .global-off { 
+            background-color: #202124; 
+            color: #9aa0a6; 
+            border: 1px solid #5f6368;
+        }
+        .global-off:hover { background-color: #303134; color: #ffffff; }
+        
+        /* Dark Mode Whitelist Button Styles */
+        .whitelist-add { 
+            background-color: #8ab4f8; 
+            color: #202124; 
+        }
+        .whitelist-add:hover { background-color: #aecbfa; }
+        
+        .whitelist-remove { 
+            background-color: #f28b82; 
+            color: #202124; 
+        }
+        .whitelist-remove:hover { background-color: #f6aea9; }
+        
+        /* Dark theme divider */
+        hr { width: 100%; border: 0; border-top: 1px solid #3c4043; margin: 5px 0; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="title">Quick Dark Mode</div>
+        <button id="globalToggleBtn">Global: ON</button>
+        
+        <hr>
+        
+        <div class="site-name" id="currentSite">Loading...</div>
+        <button id="whitelistToggleBtn">Add to Whitelist</button>
+    </div>
+    <script src="popup.js"></script>
+</body>
+</html>
